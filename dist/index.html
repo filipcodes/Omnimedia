@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omni - Grow your following</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-00f01ea7.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon-248a1a87.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,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"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEX////////////////////////////9/P3j4e+/utnRzeP8+/3////////k4u/Dvtvd2uv5+fv9/f7Py+OCd7l6brNzZ7Kxq9P+/v78+/3IxN+vqdK7tdd6b7VqXa2Bd7dyZbCIfrzd2ur4+Pv9/f29uNh0aLJrXq1/dbaFe7l7cLR8cbWGfbl/dLaRh8HBvNvz8vf39vqSicF4bLN+c7Z6b7SEerh7cLWDebiIfrpsX656b7O8t9j8/P2WjcRqXK18cLWCeLeHfbl9crWBdrd7b7RwZLCclMipoc5zZ7F+c7WIfrl8cbRtYa+ooc63stWGfLiFfLd/drWDebZ5b7GCeLaEeraWjcLw7/bZ1ul5brV3bLOJgLqDebfx7/bSzuVuYq+AdbeDeLeDeLh1abPo5vGKgbtyZrBvYq+AdraJf7ra1+mjm8t9creFerh+dLaAdrdwY7BrXq6fl8jy8fbq6PKup9BuYa+rpM7Cvdy5s9f08/jc2ut/dLh9cra4stb39/qtQU3/AAAADXRSTlPAw+L748TGyOb9/efJckJqLgAAAAFiS0dEAIgFHUgAAAAHdElNRQfnARwALzY9nO35AAAA40lEQVQY02NgAAFGJmZmFlYwk4EXAvj4BQTBDIiAkLCIqJi4BFRAUkpaRlZOXkFRSRksoKKqpq6hqaWtpaOrp28AFDA0MjYxNTPXtLBUs7K2AQrY2tk7ODo5y7u4apu5uQsBzfDw1NDy0vb2MXM09/WzBQr4BwQGBQcGh4SGBYZHALVERkV7xXhpO8Zq6WorxgEF4hN0E821k5yTLbXVUviAAqlp6RlemVla8i66Js7ZQAGh7JzcvHxt7QLLwqLiErDThUrLMlw8yysqq6phfqmpja6rb4B4jg0E2Dk4ubh5wEwABVUtyv2Joo8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDEtMjhUMDA6NDc6NTQrMDA6MDCrgwbuAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAxLTI4VDAwOjQ3OjU0KzAwOjAw2t6+UgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+    />
+    <link
+      rel="manifest"
+      href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiT21uaSIsCiAgICAic2hvcnRfbmFtZSI6ICJPbW5pIiwKICAgICJpY29ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJzcmMiOiAiL2FuZHJvaWQtY2hyb21lLTE5MngxOTIucG5nIiwKICAgICAgICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJzcmMiOiAiL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKICAgICAgICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICAgICAgfQogICAgXSwKICAgICJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo="
+    />
+    <link
+      rel="mask-icon"
+      href="./assets/safari-pinned-tab-9c217c1b.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script type="module" crossorigin src="./assets/index-1343dc86.js"></script>
+    <link rel="stylesheet" href="./assets/index-a0c137d8.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div
+        class="whitener"
+        style="
+          background-color: #ffffff;
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+        "
+      ></div>
+      <section class="contact">
+        <div class="contact__container hidden">
+          <button class="contact__close btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <h2 class="contact__title">Get In Touch.</h2>
+          <form action="PUSH" class="contact__form">
+            <input
+              type="text"
+              name="name_input"
+              id="name_input"
+              placeholder="First Name"
+              class="contact__form__name contact__form__input"
+            />
+            <input
+              type="text"
+              name="surname_input"
+              placeholder="Last Name"
+              id="surname_input"
+              class="contact__form__surname contact__form__input"
+            />
+            <input
+              type="email"
+              name="email_input"
+              id="email_input"
+              placeholder="Email"
+              class="contact__form__mail contact__form__input"
+            />
+            <textarea
+              name="message_input"
+              id="message_input"
+              style="resize: none"
+              cols="30"
+              rows="6"
+              placeholder="Type your message here"
+              class="contact__form__message contact__form__input"
+            ></textarea>
+            <button type="submit" class="contact__form__btn btn btn__tertiary">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+      <header class="header">
+        <div class="container">
+          <a class="header__logo logo" href="#"
+            ><img src="./assets/logo.png" alt="Omni Logo" height="90px"
+          /></a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a href="#about">About</a></li>
+              <li class="header__item"><a href="#process">Process</a></li>
+              <li class="header__item">
+                <a href="#cta">Grow with us</a>
+              </li>
+              <li class="header__item">
+                <button class="btn contacting__btn">Contact</button>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn header__btn" aria-label="Click to open navigation">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="header__nav__open"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="header__nav__close"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <!--?xml version="1.0" standalone="no"?-->
+          <svg
+            id="sw-js-blob-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="shape shape4"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(63.734, 36.362, 103.783, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(142.677, 31, 251, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M13,-14.7C18.4,-11,25.3,-8.3,28,-3.4C30.7,1.5,29.2,8.8,25.1,13.1C20.9,17.5,14.2,19,8.3,19.7C2.4,20.5,-2.6,20.6,-10.2,20.9C-17.8,21.2,-28,21.6,-34.9,16.7C-41.9,11.8,-45.5,1.6,-41.3,-4.7C-37,-10.9,-25,-13.1,-16.8,-16.3C-8.6,-19.5,-4.3,-23.7,-0.2,-23.4C3.8,-23.1,7.6,-18.3,13,-14.7Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              style="transition: all 0.3s ease 0s"
+              stroke-width="0"
+              stroke="url(#sw-gradient)"
+            ></path>
+          </svg>
+          <div class="container">
+            <div class="hero__text">
+              <h1 class="hero__title not_visible">
+                Social media marketing for your company
+              </h1>
+              <p class="hero__subtitle not_visible">
+                Targeted advertising, breathtaking ROI, abrupt revenue growth.
+                All in one place.
+              </p>
+              <div class="hero__btns not_visible">
+                <a href="#about" class="btn btn__secondary">Learn more</a>
+                <button href="#" class="btn btn__primary contacting__btn">
+                  Work with us
+                </button>
+              </div>
+            </div>
+            <div class="hero__image__section">
+              <!--?xml version="1.0" standalone="no"?-->
+              <svg
+                id="sw-js-blob-svg"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                class="hero__svg hero__svg__1"
+              >
+                <defs>
+                  <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                    <stop
+                      id="stop1"
+                      stop-color="rgba(76, 29, 149, 1)"
+                      offset="0%"
+                    ></stop>
+                    <stop
+                      id="stop2"
+                      stop-color="rgba(147, 51, 234, 1)"
+                      offset="100%"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#sw-gradient)"
+                  d="M23.3,-17C28.7,-11.7,30.6,-2.2,28.9,7C27.1,16.3,21.7,25.1,15.2,26.2C8.6,27.3,0.9,20.7,-7.3,16.3C-15.6,12,-24.4,9.8,-27,4.4C-29.6,-1,-26.1,-9.5,-20.6,-14.8C-15.1,-20.1,-7.5,-22.2,0.7,-22.7C8.9,-23.3,17.8,-22.3,23.3,-17Z"
+                  width="100%"
+                  height="100%"
+                  transform="translate(50 50)"
+                  style="transition: all 0.3s ease 0s"
+                  stroke-width="0"
+                  stroke="url(#sw-gradient)"
+                ></path>
+              </svg>
+              <!--?xml version="1.0" standalone="no"?-->
+              <svg
+                id="sw-js-blob-svg"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                class="hero__svg hero__svg__2"
+              >
+                <defs>
+                  <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                    <stop
+                      id="stop1"
+                      stop-color="rgba(94.727, 5.341, 233.56, 1)"
+                      offset="0%"
+                    ></stop>
+                    <stop
+                      id="stop2"
+                      stop-color="rgba(182.849, 136.94, 224.453, 1)"
+                      offset="100%"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#sw-gradient)"
+                  d="M17.1,-17.7C23.3,-15.2,30.1,-10.9,31.4,-5.3C32.6,0.2,28.3,7,24.9,15.7C21.5,24.4,19.1,35.1,13.1,38.3C7.1,41.4,-2.4,37.1,-9.8,32.1C-17.1,27.2,-22.4,21.5,-27.4,14.8C-32.4,8.1,-37.2,0.4,-37.8,-8.5C-38.4,-17.4,-34.9,-27.3,-27.9,-29.7C-20.9,-32,-10.4,-26.7,-2.5,-23.7C5.5,-20.7,10.9,-20.1,17.1,-17.7Z"
+                  width="100%"
+                  height="100%"
+                  transform="translate(50 50)"
+                  style="transition: all 0.3s ease 0s"
+                  stroke-width="0"
+                  stroke="url(#sw-gradient)"
+                ></path>
+              </svg>
+              <div class="hero__phone not_visible">
+                <div class="hero__phone__stories">
+                  <span class="hero__phone__story"
+                    ><span class="hero__phone__story__active">&#8203;</span
+                    >&#8203;</span
+                  >
+                  <span class="hero__phone__story">&#8203;</span>
+                  <span class="hero__phone__story">&#8203;</span>
+                  <span class="hero__phone__story">&#8203;</span>
+                </div>
+                <div class="hero__phone__profile">
+                  <img
+                    src="./assets/jewlery-dbcf6a40.webp"
+                    alt="profile photo of dubai_diamonds"
+                  />
+                  <span class="profile__name"
+                    >jewels_premium <span>2h</span></span
+                  >
+                </div>
+                <img
+                  class="hero__jewels"
+                  src="./assets/jewels-98f35c89.webp"
+                  alt="An instagram reel with jewels displayed"
+                />
+                <div class="hero__phone__shop">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hero__phone__shop__icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                    />
+                  </svg>
+
+                  <span class="hero__phone__shop__text">Shop now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="numbers section">
+          <div class="container">
+            <figure class="numbers__block not_visible">
+              <span class="numbers__number">4x</span>
+              <figcaption class="numbers__caption">
+                Effectivness of your online campaign
+              </figcaption>
+            </figure>
+            <figure class="numbers__block not_visible">
+              <span class="numbers__number">5h</span>
+              <figcaption class="numbers__caption">
+                Time saved on marketing every week
+              </figcaption>
+            </figure>
+            <figure class="numbers__block not_visible">
+              <span class="numbers__number">7.8</span>
+              <figcaption class="numbers__caption">
+                Average return on investment
+              </figcaption>
+            </figure>
+            <figure class="numbers__block not_visible">
+              <span class="numbers__number">12</span>
+              <figcaption class="numbers__caption">
+                Currently active marketing campaigns
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+        <section id="about" class="about section">
+          <!--?xml version="1.0" standalone="no"?-->
+          <svg
+            id="sw-js-blob-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="shape shape5"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(63.734, 36.362, 103.783, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(142.677, 31, 251, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M6.8,-7.5C8.8,-6.4,10.4,-4.3,11.1,-1.7C11.8,0.8,11.7,3.8,11.6,9.3C11.5,14.9,11.5,23.1,6.9,29.3C2.3,35.5,-6.8,39.6,-13.3,37C-19.8,34.4,-23.6,25.2,-27.7,16.7C-31.8,8.2,-36.1,0.5,-35.7,-7C-35.2,-14.6,-30,-22.1,-23.3,-22.4C-16.5,-22.6,-8.3,-15.7,-2.9,-12.2C2.4,-8.7,4.8,-8.6,6.8,-7.5Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              style="transition: all 0.3s ease 0s"
+              stroke-width="0"
+              stroke="url(#sw-gradient)"
+            ></path>
+          </svg>
+          <!--?xml version="1.0" standalone="no"?-->
+          <svg
+            id="sw-js-blob-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="shape shape7"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(63.734, 36.362, 103.783, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(142.677, 31, 251, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M21.6,-28.9C25.1,-22.9,23,-13.3,20.9,-6.5C18.8,0.4,16.7,4.4,14.5,8.6C12.3,12.8,10.1,17.1,6.5,18.8C2.9,20.5,-2,19.7,-9.8,19.9C-17.6,20.1,-28.3,21.3,-34.9,16.8C-41.4,12.3,-43.8,2.1,-39.6,-4.4C-35.3,-10.8,-24.4,-13.5,-16.7,-18.7C-9,-24,-4.5,-31.9,2.3,-34.6C9.1,-37.3,18.1,-34.9,21.6,-28.9Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              style="transition: all 0.3s ease 0s"
+              stroke-width="0"
+              stroke="url(#sw-gradient)"
+            ></path>
+          </svg>
+          <div class="container">
+            <div class="about__text">
+              <span class="pretitle not_visible">About us</span>
+              <h2 class="about__title not_visible">
+                Helping you succeed in the world of media.
+              </h2>
+              <p class="about__paragraph not_visible">
+                We started our journey as a small team of digital marketing
+                enthusiasts, passionate about helping businesses grow through
+                social media. From crafting a strong social media presence, to
+                boosting online reach and engagement, we have helped numerous
+                businesses reach their target audience. We are dedicated to
+                delivering measurable results and ensuring our clients are
+                satisfied with the outcome.
+              </p>
+              <a
+                href="#"
+                class="contacting__btn about__btn btn btn__primary not_visible"
+                >Get in touch</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="numbers">
+          <div class="container"></div>
+        </section>
+
+        <section id="process" class="steps">
+          <!--?xml version="1.0" standalone="no"?-->
+          <svg
+            id="sw-js-blob-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="shape6"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(63.734, 36.362, 103.783, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(142.677, 31, 251, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M16.3,-21.4C21.7,-14.9,26.9,-10.3,29,-4.3C31.1,1.8,30,9.2,27.2,17.3C24.5,25.5,20.1,34.3,14,35C7.9,35.8,0.1,28.4,-8.9,24.9C-18,21.5,-28.4,21.9,-35.3,17C-42.2,12.1,-45.6,1.7,-42.7,-6.3C-39.8,-14.3,-30.6,-19.9,-22.4,-25.8C-14.3,-31.8,-7.1,-38.1,-0.8,-37.1C5.5,-36.1,10.9,-27.8,16.3,-21.4Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              style="transition: all 0.3s ease 0s"
+              stroke-width="0"
+              stroke="url(#sw-gradient)"
+            ></path>
+          </svg>
+          <div class="container">
+            <span class="pretitle not_visible">Process</span>
+            <h2 class="steps__title not_visible">
+              Your social presence in just 3 steps
+            </h2>
+            <div class="steps__grid">
+              <div class="steps__1 not_visible">
+                <span class="steps__num">01 </span>
+                <h3 class="steps__subtitle">Contact us</h3>
+                <p class="steps__desc">
+                  Send us an email or a message on soacial media. Be sure to
+                  include some basic information about your business and your
+                  expectations.
+                </p>
+                <buton class="btn btn__tertiary"
+                  >Email us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="btn__arr"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </buton>
+              </div>
+              <img
+                src="./assets/email-3aa42328.svg"
+                alt="An illustration of a man recieving a message"
+                class="not_visible"
+              />
+              <img
+                src="./assets/videocall-ecbc0a10.svg"
+                alt="Several people having a video call"
+                class="not_visible"
+              />
+              <div class="steps__2 not_visible">
+                <span class="steps__num">02 </span>
+                <h3 class="steps__subtitle">Attend an Online meeting</h3>
+                <p class="steps__desc">
+                  After initial exchange of emails, we will meet on a 30-minutes
+                  long video call, and really get into your bussines. Be
+                  prepared for a lot of questions c:
+                </p>
+              </div>
+
+              <div class="steps__3 not_visible">
+                <span class="steps__num">03 </span>
+                <h3 class="steps__subtitle">Let our team do the hard work</h3>
+                <p class="steps__desc">
+                  Lastly, sit back, open your instagram analytics, and deeply
+                  relax while looking at the numbers as they are skyrocketing.
+                </p>
+              </div>
+              <img
+                src="./assets/socials1-c3f9633d.svg"
+                alt="People desiging a social media campaign"
+                class="not_visible"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="cta" class="cta">
+          <!--?xml version="1.0" standalone="no"?-->
+          <svg
+            id="sw-js-blob-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="shape3"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(63.734, 36.362, 103.783, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(142.677, 31, 251, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M13.8,-18C18,-12.9,21.7,-8.7,25.6,-2.2C29.5,4.3,33.7,13.1,31.7,19.8C29.6,26.5,21.3,31.1,12.5,34.1C3.8,37.2,-5.4,38.7,-13.8,36.3C-22.2,34,-29.8,27.8,-30.8,20.5C-31.8,13.2,-26.2,4.8,-23.4,-2.9C-20.6,-10.6,-20.6,-17.5,-17.1,-22.7C-13.7,-27.9,-6.8,-31.3,-1,-30.1C4.8,-28.9,9.6,-23,13.8,-18Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              style="transition: all 0.3s ease 0s"
+              stroke-width="0"
+              stroke="url(#sw-gradient)"
+            ></path>
+          </svg>
+          <div class="container not_visible">
+            <h2 class="cta__title">Join the community.</h2>
+            <p class="cta__desc">
+              Get a weekly email with marketing tactics and opportunities
+            </p>
+            <form action="GET" class="cta__form">
+              <input
+                class="cta__input"
+                type="email"
+                placeholder="your@email.com"
+              />
+              <button class="btn cta__btn" submit>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <a href="#" class="footer__logo logo"
+              ><img src="./assets/logo_white.png" alt="Omni Logo" height="90px"
+            /></a>
+            <div class="footer__legals">
+              <h3 class="footer__title">Agency</h3>
+              <ul class="footer__legal__links">
+                <li class="footer__item">
+                  <a href="#about" class="footer__link">About</a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Careers</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Security</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__legals">
+              <h3 class="footer__title">Clients</h3>
+              <ul class="footer__legal__links">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">List of clients</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Project documentation</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Biggest clients</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__legals">
+              <h3 class="footer__title">Legals</h3>
+              <ul class="footer__legal__links">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Imprint</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Privacy policy</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Cookie policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <footer class="footer__footer">
+            <div class="footer__socials">
+              <a href="https://www.instagram.com/omnimarketingmedia/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>
